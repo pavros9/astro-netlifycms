@@ -1,50 +1,62 @@
-
+// import { global_options } from "./global_options";
+// import { pages } from "./pages";
 export default [
     {
         collection: {
-            label: 'Настройка сайта',
-            name: 'globals',
+            name: 'pages',
+            label: 'Страницы',
+            label_singular: 'страницу',
+            folder: 'content/pages',
+            create: true,
             delete: true,
-            files: [
+            slug: "{{slug}}",
+            fields: [
               {
-                label: 'Настройка сайта',
-                name: 'site',
-                file: 'content/pages/globals/site.md',
-                fields:[
+                name: 'title',
+                label: 'Url',
+                widget: 'string'
+              },
+              {
+                name: 'titleHead',
+                label: 'Title',
+                widget: 'string'
+              },
+                {
+                name: 'page',
+                label: 'Контент страницы',
+                widget: 'list',
+                types: [
                   {
-                    label: 'Site name',
-                    name: 'siteName',
-                    widget: 'string'
-                  },
-                  {
-                    label: 'Domain',
-                    name: 'domain',
-                    widget: 'string'
-                  },
-                  {
-                    label: 'Primary navigation',
-                    name: 'primaryNav',
-                    widget: 'list',
+                    name: 'firstName',
+                    label: 'firstName',
+                    widget: 'object',
                     fields: [
                       {
-                        label: 'Label',
-                        name: 'label',
+                        name: 'firstName',
+                        label: 'firstName',
                         widget: 'string'
-                      },
+                      }
+                    ]
+                  },
+                  {
+                    name: 'img',
+                    label: 'img',
+                    widget: 'object',
+                    fields: [
                       {
-                        label: 'Page',
-                        name: 'uri',
-                        widget: 'relation',
-                        collection: 'pages',
-                        value_field: '{{slug}}',
-                        display_fields: ['title'],
-                        search_fields: ['title']
+                        name: 'posts',
+                        label: 'img',
+                        widget: 'string'
                       }
                     ]
                   }
                 ]
               }
             ]
-        },
-    }
+        }
+    },
+    // {
+    //     collection: pages
+    // },
+    
 ];
