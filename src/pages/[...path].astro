@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { pageData } from "@utils/pageData.js";
+export async function getStaticPaths() {
+  const pages = await Astro.glob("../../content/pages/**/*.md");
+
+  return pages.map((page) => {
+    // strip starting slash
+    let path = page?.url?.slice(1);
+    if (path === "home") {
+      path = undefined;
+    }
+
+    return {
+      params: {
+        path,
+      },
+      props: page,
+    };
+  });
+}
+
+const data = await pageData(Astro.props.url.slice(1));
+---
+
+<Layout {...data}>
+	<div class="header">{data.site.primaryNav.map((item) => {
+		return <li><a href={`/` + (item.uri === 'home' ? "" : item.uri) }>{item.label}</a></li>
+	})}</div>
+	<h2 class="titlePage">{data.titleHead}</h2>
+</Layout>
