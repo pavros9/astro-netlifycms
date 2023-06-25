@@ -5,6 +5,7 @@ import collections from '../../collections';
 console.log('okey')
 CMS.init({
   config: {
+    locale: 'ru',
     backend: {
       name: 'git-gateway',
       branch: 'latest',
