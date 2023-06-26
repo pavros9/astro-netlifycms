@@ -1,4 +1,4 @@
-import { getPages } from "./getDataFromApi.js";
+import { getPages } from "./getDataFromApi.ts";
 import fs from "fs";
 import fm from "front-matter";
 import { marked } from "marked";
