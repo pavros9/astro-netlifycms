@@ -27,3 +27,12 @@ code {
 .header li {
 	list-style-type: none;
 }
+
+.page {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    max-width: 200px;
+    font-weight: bold;
+    text-align: center;
+}

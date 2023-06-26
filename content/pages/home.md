@@ -1,7 +1,7 @@
 ---
 title: home
-titleHead: Главная страница
+titleHead: Главная
 page:
   - type: firstName
-    firstName: Ольга
+    firstName: Рома
 ---

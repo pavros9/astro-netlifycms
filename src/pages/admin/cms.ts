@@ -1,8 +1,8 @@
 import CMS from 'netlify-cms-app';
 import GlobalStyles from '../../styles/base/base.css?inline';
 import collections from '../../collections';
+import { ArticlePreview } from '../../components/page'
 
-console.log('okey')
 CMS.init({
   config: {
     locale: 'ru',
@@ -15,7 +15,7 @@ CMS.init({
     public_folder: 'assets/blog',
     collections: collections.map(({ collection }) => collection),
   },
-});
+})
 
 /**
  * Another drawback of using Netlify CMS is that it registers all preview
@@ -27,3 +27,5 @@ CMS.init({
  * a raw CSS string to inject instead of as a URL to load a stylesheet from.
  */
 CMS.registerPreviewStyle(GlobalStyles, { raw: true });
+// CMS.registerWidget("page", PageControl, ArticlePreview);
+CMS.registerPreviewTemplate("pages", ArticlePreview);

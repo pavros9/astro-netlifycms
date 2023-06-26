@@ -30,7 +30,7 @@ export const pages = {
               {
                 name: 'firstName',
                 label: 'firstName',
-                widget: 'string'
+                widget: 'string',
               }
             ]
           },

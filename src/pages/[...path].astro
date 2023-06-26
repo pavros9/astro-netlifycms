@@ -27,5 +27,5 @@ const data = await pageData(Astro.props.url.slice(1));
 	<div class="header">{data.site.primaryNav.map((item) => {
 		return <li><a href={`/` + (item.uri === 'home' ? "" : item.uri) }>{item.label}</a></li>
 	})}</div>
-	<h2 class="titlePage">{data.titleHead}</h2>
+	<h2 class="page">{data.titleHead}</h2>
 </Layout>
