@@ -24,24 +24,24 @@ export const pages = {
         types: [
           {
             name: 'firstName',
-            label: 'firstName',
+            label: 'Имя',
             widget: 'object',
             fields: [
               {
                 name: 'firstName',
-                label: 'firstName',
+                label: 'Имя',
                 widget: 'string',
               }
             ]
           },
           {
             name: 'img',
-            label: 'img',
+            label: 'Картинка',
             widget: 'object',
             fields: [
               {
                 name: 'posts',
-                label: 'img',
+                label: 'Картинка',
                 widget: 'string'
               }
             ]

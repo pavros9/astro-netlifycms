@@ -9,33 +9,54 @@ export const global_options = {
         file: 'content/pages/globals/site.md',
         fields:[
           {
-            label: 'Site name',
+            label: 'Название сайта',
             name: 'siteName',
             widget: 'string'
           },
           {
-            label: 'Domain',
+            label: 'Домен',
             name: 'domain',
             widget: 'string'
           },
           {
-            label: 'Primary navigation',
+            label: 'Навигация',
             name: 'primaryNav',
             widget: 'list',
             fields: [
               {
-                label: 'Label',
+                label: 'Ссылка',
                 name: 'label',
                 widget: 'string'
               },
               {
-                label: 'Page',
+                label: 'Страница',
                 name: 'uri',
                 widget: 'relation',
                 collection: 'pages',
                 value_field: '{{slug}}',
                 display_fields: ['title'],
                 search_fields: ['title']
+              },
+              {
+                label: 'Список',
+                name: 'dropdown',
+                widget: 'list',
+                fields: [
+                  {
+                    label: 'Ссылка',
+                    name: 'uri_dropdown',
+                    widget: 'string'
+                  },
+                  {
+                    label: 'Страница',
+                    name: 'uri',
+                    widget: 'relation',
+                    collection: 'pages',
+                    value_field: '{{slug}}',
+                    display_fields: ['title'],
+                    search_fields: ['title']
+                  },
+                ]
               }
             ]
           }
