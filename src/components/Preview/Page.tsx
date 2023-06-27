@@ -1,3 +1,4 @@
+import { Mapper } from "src/pages/Mapper/Mapper";
 
 export const PagePreview = ({entry, widgetsFor }) => {
     const data = entry.getIn([ 'data'] ).toJS();
@@ -6,9 +7,6 @@ export const PagePreview = ({entry, widgetsFor }) => {
         <div className="page">
             {data.title}
         </div>
-       <ul>
-            <li>{data.page[0]?.type}</li>
-            {data.page.map((page, index) => <li key={index}>{page.firstName}</li>)}
-       </ul>
+        <Mapper pages={data.page}/>
     </>)
 }

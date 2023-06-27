@@ -5,7 +5,7 @@ import { removeIndex } from '@utils/removeIndex'
 import { Debug } from 'astro/components';
 import { Mapper } from './Mapper/Mapper'
 import { HeaderTemplate } from "src/components/ReactComponents/HeaderTemplate/HeaderTemplate";
-import { SliderTemplate } from "src/components/ReactComponents/SliderTemplate/SliderTemplate";
+
 
 export async function getStaticPaths() {
   let pages = [];
@@ -31,7 +31,6 @@ export async function getStaticPaths() {
     }
   }
   
-// console.log("url + " +  Astro.props.url)
 const data = await pageData(Astro.props.url.slice(1));
 
 ---
@@ -39,7 +38,5 @@ const data = await pageData(Astro.props.url.slice(1));
 <Layout {...data}>
 	<HeaderTemplate navigation={data?.site?.primaryNav} client:load/>
 	<h2 class="pageTitle">{data?.titleHead}</h2>
-  <SliderTemplate client:load/>
-  <Mapper pages={data.page}/>
-
+  <Mapper pages={data.page} client:load/>
 </Layout>
