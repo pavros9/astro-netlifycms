@@ -15,7 +15,8 @@ export async function getStaticPaths() {
       let path = page?.url?.slice(1);
       path = path.replace('/_index', '')
 
-      if (path === "main") {
+      if (path === "main") 
+      {
         path = undefined;
       }
       console.log(path)
@@ -35,7 +36,7 @@ const data = await pageData(Astro.props.url.slice(1));
 ---
 
 <Layout {...data}>
-	<HeaderTemplate navigation={data?.site?.primaryNav}/>
+	<HeaderTemplate navigation={data?.site?.primaryNav} client:load/>
 	<h2 class="page">{data?.titleHead}</h2>
   <Debug {data}/>
 </Layout>
