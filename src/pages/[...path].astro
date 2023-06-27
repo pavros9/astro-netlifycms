@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { pageData } from "@utils/pageData.ts";
+import { removeIndex } from '@utils/removeIndex'
 import { Debug } from 'astro/components';
 import { HeaderTemplate } from "src/components/ReactComponents/HeaderTemplate/HeaderTemplate";
 
@@ -11,15 +12,13 @@ export async function getStaticPaths() {
 
   }finally {
     return pages.map((page) => {
-    
-      let path = page?.url?.slice(1);
-      path = path.replace('/_index', '')
+      let path = removeIndex(page?.url?.slice(1));
 
       if (path === "main") 
       {
         path = undefined;
       }
-      console.log(path)
+
       return {
           params: {
             path: path,
