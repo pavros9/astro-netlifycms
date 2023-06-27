@@ -1,34 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from '../components/Header.astro'
 import { pageData } from "@utils/pageData.ts";
 import { Debug } from 'astro/components';
+import { HeaderTemplate } from "src/components/ReactComponents/HeaderTemplate/HeaderTemplate";
 
 export async function getStaticPaths() {
-  const pages = await Astro.glob("../../content/pages/**/*.md");
-  
-  return pages.map((page) => {
-    // strip starting slash
-    let path = page?.url?.slice(1);
-    if (path === "home") {
-      path = undefined;
+  let pages = [];
+  try {
+    pages = await Astro.glob("../../content/pages/**/*.md");
+
+  }finally {
+    return pages.map((page) => {
+    
+      let path = page?.url?.slice(1);
+      path = path.replace('/_index', '')
+
+      if (path === "main") {
+        path = undefined;
+      }
+      console.log(path)
+      return {
+          params: {
+            path: path,
+          },
+          props: page,
+        };
+    });
     }
-
-    return {
-      params: {
-        path,
-      },
-      props: page,
-    };
-  });
-}
-
+  }
+  
+// console.log("url + " +  Astro.props.url)
 const data = await pageData(Astro.props.url.slice(1));
-
 
 ---
 
 <Layout {...data}>
-	<Header navigation={data.site.primaryNav}/>
-	<h2 class="page">{data.titleHead}</h2>
+	<HeaderTemplate navigation={data?.site?.primaryNav}/>
+	<h2 class="page">{data?.titleHead}</h2>
+  <Debug {data}/>
 </Layout>
