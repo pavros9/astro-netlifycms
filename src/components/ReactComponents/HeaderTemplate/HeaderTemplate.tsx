@@ -1,7 +1,7 @@
 import { DropDownMenuTemplate } from "../DropDownMenuTemplate/DropDownMenuTemplate"
 import { useState } from "react"
 import './HeaderTemplate.css'
-import Icon from '@public/astro.svg'
+import Icon from '/astro.svg'
 
 export const HeaderTemplate = ({navigation}) => {
     const [isOpen, setIsOpen] = useState(false);

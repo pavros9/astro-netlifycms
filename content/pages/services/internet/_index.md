@@ -1,6 +1,6 @@
 ---
 title: internet
-titleHead: Интрнет
+titleHead: Интернет
 page:
   - type: firstName
     firstName: Лиза

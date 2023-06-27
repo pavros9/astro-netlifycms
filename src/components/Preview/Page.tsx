@@ -7,7 +7,7 @@ export const PagePreview = ({entry, widgetsFor }) => {
             {data.title}
         </div>
        <ul>
-            <li>{data.page[0].type}</li>
+            <li>{data.page[0]?.type}</li>
             {data.page.map((page, index) => <li key={index}>{page.firstName}</li>)}
        </ul>
     </>)

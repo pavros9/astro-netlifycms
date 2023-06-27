@@ -67,3 +67,15 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.firstName {
+    height: 300px;
+    background-color: red;
+    text-align: center;
+}
+
+
+/* header */
+.icon {
+    max-width: 60px;
+}
