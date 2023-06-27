@@ -1,5 +1,7 @@
 import { DropDownMenuTemplate } from "../DropDownMenuTemplate/DropDownMenuTemplate"
 import { useState } from "react"
+import './HeaderTemplate.css'
+import Icon from '@public/astro.svg'
 
 export const HeaderTemplate = ({navigation}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +19,7 @@ export const HeaderTemplate = ({navigation}) => {
         <nav className="max-w-screen-xl md:h-20 relative h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
             <a className="text-3xl font-bold leading-none" href="#">
                 <a href="/">
-                    Картинка
+                   <img  className="icon" src={Icon}/>
                 </a>
             </a>
             <div className="sm:hidden">
