@@ -6,7 +6,7 @@ export const global_options = {
       {
         label: 'Настройка сайта',
         name: 'site',
-        file: 'content/pages/globals/site.md',
+        file: 'content/globals/site.md',
         fields:[
           {
             label: 'Название сайта',
@@ -44,6 +44,11 @@ export const global_options = {
                 fields: [
                   {
                     label: 'Ссылка',
+                    name: 'link_dropdown',
+                    widget: 'string'
+                  },
+                  {
+                    label: 'path',
                     name: 'uri_dropdown',
                     widget: 'string'
                   },

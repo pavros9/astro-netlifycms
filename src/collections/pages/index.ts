@@ -6,6 +6,8 @@ export const pages = {
     create: true,
     delete: true,
     slug: "{{slug}}",
+    nested:{depth:3},
+    meta:{path:{widget:'string',label:'Path',index_file:'_index'}},
     fields: [
       {
         name: 'title',

@@ -11,6 +11,7 @@ renderer.paragraph = (input) => {
 };
 
 export async function pageData(uri) {
+
   const pagesCollection = getPages("content/pages");
   const pageData = pagesCollection.find((page) => page.uri === uri);
   const segments = [];
@@ -21,7 +22,7 @@ export async function pageData(uri) {
     return pagesCollection.find((page) => page.uri === segments.join("/"));
   });
 
-  const siteFile = fs.readFileSync("content/pages/globals/site.md");
+  const siteFile = fs.readFileSync("content/globals/site.md");
   const siteData = fm(siteFile.toString()).attributes;
 
   return {

@@ -5,7 +5,7 @@ import glob from 'glob'
 
 export const getPages = (directory, uriPrefix = '') => {
   const pages = [];
-
+  
   const files = glob.sync('**/*.md', {
     cwd: directory,
   });
