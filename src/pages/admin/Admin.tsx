@@ -12,8 +12,10 @@ const Admin = () => {
             config: {
                 locale: 'ru',
                 backend: {
-                name: 'git-gateway',
-                branch: 'latest',
+                    name: 'github',
+                    repo: 'pavros9/astro-netlifycms',
+                    branch: 'master',
+                    base_url: 'https://auth-xi8z.onrender.com'
                 },
                 local_backend: true,
                 media_folder: 'public/assets/blog',
