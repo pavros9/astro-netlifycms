@@ -9,12 +9,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
   },
   "devDependencies": {
     "@astrojs/react": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "astro": "^2.7.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-react": "^7.32.2",
     "front-matter": "^4.0.2",
     "marked": "^5.1.0",
     "netlify-cms-app": "^2.15.72",
