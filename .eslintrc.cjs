@@ -44,7 +44,8 @@ module.exports = {
               "extraFileExtensions": [".astro"],
             },
             "rules": {
-                "no-unsafe-finally": "off"
+                "no-unsafe-finally": 0,
+                "react/no-unknown-property": 0
             },
           },
     ],
