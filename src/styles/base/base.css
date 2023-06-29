@@ -6,26 +6,28 @@
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 }
+
 html {
     font-family: system-ui, sans-serif;
     background-color: #F6F6F6;
 }
+
 code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-        Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono",
+        "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 
 .header {
-	display: flex;
-	padding: 20px;
-	justify-content: space-around;
-	background-color: antiquewhite;
-	font-weight: bold;
-	text-transform: uppercase;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .header li {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .pageTitle {
@@ -42,12 +44,13 @@ code {
 li.dropdown {
     display: inline-block;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
     z-index: 1;
 }
 

@@ -1,6 +1,5 @@
 import { DropDownMenuTemplate, MenuItem } from "../DropDownMenuTemplate/DropDownMenuTemplate"
 import { useState } from "react"
-import './HeaderTemplate.css'
 import Icon from '/astro.svg'
 
 interface HeaderTemplateProps {
