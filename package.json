@@ -11,7 +11,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
-    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:astro": "eslint --ext .js,.astro src",
+    "lint:astro:fix": "eslint --ext .js,.astro src --fix"
   },
   "devDependencies": {
     "@astrojs/react": "^2.2.1",
@@ -20,6 +22,7 @@
     "@typescript-eslint/parser": "^5.60.1",
     "astro": "^2.7.0",
     "eslint": "^8.43.0",
+    "eslint-plugin-astro": "^0.27.2",
     "eslint-plugin-react": "^7.32.2",
     "front-matter": "^4.0.2",
     "marked": "^5.1.0",

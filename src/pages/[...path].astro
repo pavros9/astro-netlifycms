@@ -8,35 +8,37 @@ import { HeaderTemplate } from "src/components/ReactComponents/HeaderTemplate/He
 
 
 export async function getStaticPaths() {
-  let pages = [];
-  try {
-    pages = await Astro.glob("../../content/pages/**/*.md");
+    let pages = [];
+    try {
+        pages = await Astro.glob("../../content/pages/**/*.md");
 
-  }finally {
-    return pages.map((page) => {
-      let path = removeIndex(page?.url?.slice(1));
+    }finally {
+        return pages.map((page) => {
+            let path = removeIndex(page?.url?.slice(1));
 
-      if (path === "main") 
-      {
-        path = undefined;
-      }
+            if (path === "main") 
+            {
+                path = undefined;
+            }
 
-      return {
-          params: {
-            path: path,
-          },
-          props: page,
-        };
-    });
+            return {
+                params: {
+                    path: path,
+                },
+                props: page,
+            };
+        });
     }
-  }
+
+   
+}
   
 const data = await pageData(Astro.props.url.slice(1));
 
 ---
 
 <Layout {...data}>
-	<HeaderTemplate navigation={data?.site?.primaryNav} client:load/>
-	<h2 class="pageTitle">{data?.titleHead}</h2>
-  <Mapper pages={data.page} client:load/>
+    <HeaderTemplate navigation={data?.site?.primaryNav} client:load/>
+    <h2 className="pageTitle">{data?.titleHead}</h2>
+    <Mapper pages={data.page} client:load/>
 </Layout>
