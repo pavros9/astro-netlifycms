@@ -22,13 +22,13 @@ const Admin = () => {
                 public_folder: 'assets/blog',
                 collections: collections.map(({ collection }) => collection),
             },
-            })
+        })
             
             
-            CMS.registerPreviewStyle(GlobalStyles, { raw: true });
+        CMS.registerPreviewStyle(GlobalStyles, { raw: true });
             
-            CMS.registerPreviewTemplate("pages", PagePreview);
-            CMS.registerPreviewTemplate("site", NavigationPreview);
+        CMS.registerPreviewTemplate("pages", PagePreview);
+        CMS.registerPreviewTemplate("site", NavigationPreview);
     }, [])
     return <></>
 }

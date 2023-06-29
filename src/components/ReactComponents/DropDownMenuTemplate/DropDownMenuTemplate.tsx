@@ -1,17 +1,40 @@
 import { removeIndex } from '@utils/removeIndex';
 import './DropDownMenuTemplate.css'
 
-export const DropDownMenuTemplate = ({menu_item}) => {
-    const uri = removeIndex(menu_item.uri);
+export interface MenuItem {
+    uri: string,
+    label: string,
+    dropdown: Dropdown[]
+}
+
+interface Dropdown {
+    uri_dropdown: string,
+    link_dropdown: string
+}
+
+interface DropDownMenuTemplateProps {
+    menu_item: MenuItem
+}
+
+export const DropDownMenuTemplate = (props: DropDownMenuTemplateProps) => {
+    const {
+        menu_item :{
+            uri,
+            label,
+            dropdown
+        }
+    } = props;
+
+    const uriFormat = removeIndex(uri);
 
     return <>
         <li className="dropdown">
-            <a href={`/` + (menu_item.uri === 'home' ? "" : uri)}
+            <a href={`/` + (uriFormat === 'home' ? "" : uriFormat)}
                 className="dropbtn text-sm text-gray-400 hover:text-gray-500"
-            >{menu_item.label}</a>
+            >{label}</a>
             <div className="dropdown-content">
-                {menu_item.dropdown?.map((item) => (
-                <a href={item.uri_dropdown}>{item.link_dropdown}</a>))
+                {dropdown?.map((item, index) => (
+                    <a href={item.uri_dropdown} key={index}>{item.link_dropdown}</a>))
                 }
             </div>
         </li>

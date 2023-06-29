@@ -1,8 +1,14 @@
 import { Mapper } from "src/pages/Mapper/Mapper";
 
-export const PagePreview = ({entry, widgetsFor }) => {
+interface PagePreviewProps {
+    entry: any
+}
+
+export const PagePreview = (props: PagePreviewProps) => {
+    const { entry } = props;
+    
     const data = entry.getIn([ 'data'] ).toJS();
-    console.log(data)
+
     return (<>
         <div className="page">
             {data.title}

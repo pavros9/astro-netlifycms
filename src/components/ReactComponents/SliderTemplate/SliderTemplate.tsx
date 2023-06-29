@@ -3,13 +3,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import './SliderTemplate.css'
 
+interface SliderTemplateProps {
+    images: string[]
+}
 
-export const SliderTemplate = ({images}) => {
+export const SliderTemplate = (props: SliderTemplateProps) => {
+    const { images } = props
 
     return <Swiper className="mySwiper">
-            {images.map((image) => {
-              return <SwiperSlide><img src={image}/></SwiperSlide>
-            })}
+        {images.map((image, index) => {
+            return <SwiperSlide key={index}><img src={image}/></SwiperSlide>
+        })}
             
-  </Swiper>
+    </Swiper>
 }

@@ -1,16 +1,29 @@
 import { SliderTemplate } from "src/components/ReactComponents/SliderTemplate/SliderTemplate";
 
-export const Mapper = ({pages}) => {
+interface MapperProps {
+    pages: Page[]
+}
+
+export interface Page {
+    type: string,
+    firstName?: string,
+    images?: string[]
+}
+
+
+export const Mapper = (props: MapperProps) => {
+
+    const { pages } = props
 
     return <>
-        {pages?.map((item) => {
+        {pages?.map((item, index) => {
             if(item.type === 'firstName'){
-                return <div className="firstName">{item.firstName}</div>
+                return <div key={index} className="firstName">{item.firstName}</div>
             }
             if(item.type === 'slider'){
                 const images = item.images
                 
-                return  <SliderTemplate images={images}/>
+                return  <SliderTemplate key={index} images={images}/>
             }
         })}
     </>
