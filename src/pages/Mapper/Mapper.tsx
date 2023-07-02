@@ -20,6 +20,9 @@ export const Mapper = (props: MapperProps) => {
             if(item.type === 'firstName'){
                 return <div key={index} className="firstName">{item.firstName}</div>
             }
+            if(item.type === 'storybook'){
+                return <div className="linkWrapper"><a key={index} href={item.storybook} className="link">Сторибук</a></div>
+            }
             if(item.type === 'slider'){
                 const images = item.images
                 

@@ -37,6 +37,18 @@ export const pages = {
                     ]
                 },
                 {
+                    name: 'storybook',
+                    label: 'Сторибук',
+                    widget: 'object',
+                    fields: [
+                        {
+                            name: 'storybook',
+                            label: 'Сторибук',
+                            widget: 'string',
+                        }
+                    ]
+                },
+                {
                     name: 'img',
                     label: 'Картинка',
                     widget: 'object',

@@ -82,3 +82,15 @@ li.dropdown {
 .icon {
     max-width: 60px;
 }
+
+.linkWrapper {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.link {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+}
