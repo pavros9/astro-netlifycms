@@ -18,7 +18,8 @@
     "lint:css:fix": "npx stylelint \"**/*.css\" --fix",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-storybook-docs": "storybook build --docs"
   },
   "devDependencies": {
     "@astrojs/react": "^2.2.1",
