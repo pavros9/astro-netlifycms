@@ -21,7 +21,7 @@ export const Mapper = (props: MapperProps) => {
                 return <div key={index} className="firstName">{item.firstName}</div>
             }
             if(item.type === 'storybook'){
-                return <div className="linkWrapper"><a key={index} href={item.storybook} className="link">Сторибук</a></div>
+                return <div key={index} className="linkWrapper"><a href={item.storybook} className="link">Сторибук</a></div>
             }
             if(item.type === 'slider'){
                 const images = item.images
