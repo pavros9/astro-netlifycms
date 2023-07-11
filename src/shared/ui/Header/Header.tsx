@@ -1,14 +1,17 @@
-import { DropDownMenu, MenuItem } from "../DropDownMenu/DropDownMenu"
+import { 
+    DropDownMenu, 
+    MenuItem 
+} from "./DropDownMenu/DropDownMenu"
 import { useState } from "react"
 import Icon from '/astro.svg'
+import cls from './Header.module.css'
 
 interface HeaderProps {
     navigation: MenuItem[]
 }
 
 export const Header = (props: HeaderProps) => {
-    const {navigation} = props;
-
+    const { navigation } = props;
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleBurger = () => {
@@ -24,7 +27,7 @@ export const Header = (props: HeaderProps) => {
             <nav className="max-w-screen-xl md:h-20 relative h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
                 <a className="text-3xl font-bold leading-none" href="#">
                     <a href="/">
-                        <img  className="icon" src={Icon}/>
+                        <img  className={cls.icon} src={Icon}/>
                     </a>
                 </a>
                 <div className="sm:hidden">
