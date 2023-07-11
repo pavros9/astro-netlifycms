@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@shared/*": ["src/shared/*"],
-      "@collections/*": ["src/collections/*"],
+      "@collections/*": ["src/app/config/collectionsNetlify/*"],
       "@app/*": ["src/app/*"],
       "@public/*": ["public/*"]
     }
