@@ -1,5 +1,5 @@
 import CMS   from 'netlify-cms-app';
-import GlobalStyles from '@app/styles/base/base.css?inline';
+import GlobalStyles from '@app/styles/global.css?inline';
 import collections from '@collections/index';
 import { PagePreview } from '@shared/ui/PreviewNetlify/Page'
 import { NavigationPreview } from '@shared/ui/PreviewNetlify/Navigation'
