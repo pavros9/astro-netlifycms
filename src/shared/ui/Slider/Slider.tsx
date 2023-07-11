@@ -10,7 +10,7 @@ interface SliderProps {
 export const Slider = (props: SliderProps) => {
     const { images } = props
 
-    return <Swiper className="mySwiper">
+    return <Swiper className="my-swiper">
         {images.map((image, index) => {
             return <SwiperSlide key={index}><img src={image}/></SwiperSlide>
         })}

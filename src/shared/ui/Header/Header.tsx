@@ -1,17 +1,18 @@
 import { 
-    DropDownMenu, 
-    MenuItem 
+    DropDownMenu
 } from "./DropDownMenu/DropDownMenu"
 import { useState } from "react"
 import Icon from '/astro.svg'
 import cls from './Header.module.css'
 
-interface HeaderProps {
-    navigation: MenuItem[]
-}
+// interface HeaderProps {
+//     navigation: MenuItem[]
+// }
 
-export const Header = (props: HeaderProps) => {
-    const { navigation } = props;
+export const Header = (props) => {
+    const { 
+        navigation 
+    } = props;
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleBurger = () => {

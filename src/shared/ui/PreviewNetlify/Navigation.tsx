@@ -9,7 +9,6 @@ export const NavigationPreview = (props: NavigationPreviewProps) => {
     const data = entry.getIn([ 'data'] ).toJS();
 
     return <div>
-        <h2 className="page-title">{data.domain}</h2>
         <Header navigation={data.primaryNav}/>
     </div>
 }
