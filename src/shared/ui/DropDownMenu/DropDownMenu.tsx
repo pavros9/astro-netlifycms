@@ -1,5 +1,5 @@
-import { removeIndex } from '@utils/removeIndex';
-import './DropDownMenuTemplate.css'
+import { removeIndex } from '@shared/lib/removeIndex';
+import './DropDownMenu.css'
 
 export interface MenuItem {
     uri: string,
@@ -12,11 +12,11 @@ interface Dropdown {
     link_dropdown: string
 }
 
-interface DropDownMenuTemplateProps {
+interface DropDownMenuProps {
     menu_item: MenuItem
 }
 
-export const DropDownMenuTemplate = (props: DropDownMenuTemplateProps) => {
+export const DropDownMenu = (props: DropDownMenuProps) => {
     const {
         menu_item :{
             uri,

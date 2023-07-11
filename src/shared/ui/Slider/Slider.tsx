@@ -1,13 +1,13 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
-import './SliderTemplate.css'
+import './Slider.css'
 
-interface SliderTemplateProps {
+interface SliderProps {
     images: string[]
 }
 
-export const SliderTemplate = (props: SliderTemplateProps) => {
+export const Slider = (props: SliderProps) => {
     const { images } = props
 
     return <Swiper className="mySwiper">

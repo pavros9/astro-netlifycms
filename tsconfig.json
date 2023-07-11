@@ -3,8 +3,9 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["src/utils/*"],
-      "@layouts/*": ["src/layouts/*"],
+      "@shared/*": ["src/shared/*"],
+      "@collections/*": ["src/collections/*"],
+      "@app/*": ["src/app/*"],
       "@public/*": ["public/*"]
     }
   }

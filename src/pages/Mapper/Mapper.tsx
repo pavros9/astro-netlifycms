@@ -1,4 +1,4 @@
-import { SliderTemplate } from "src/components/ReactComponents/SliderTemplate/SliderTemplate";
+import { Slider } from "@shared/ui/Slider/Slider";
 
 interface MapperProps {
     pages: Page[]
@@ -26,7 +26,7 @@ export const Mapper = (props: MapperProps) => {
             if(item.type === 'slider'){
                 const images = item.images
                 
-                return  <SliderTemplate key={index} images={images}/>
+                return  <Slider key={index} images={images}/>
             }
         })}
     </>

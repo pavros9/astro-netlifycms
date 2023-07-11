@@ -1,4 +1,4 @@
-import { HeaderTemplate } from "../ReactComponents/HeaderTemplate/HeaderTemplate";
+import { Header } from "@shared/ui/Header/Header"
 
 interface NavigationPreviewProps {
     entry: any
@@ -9,7 +9,7 @@ export const NavigationPreview = (props: NavigationPreviewProps) => {
     const data = entry.getIn([ 'data'] ).toJS();
 
     return <div>
-        <h2 className="pageTitle">{data.domain}</h2>
-        <HeaderTemplate navigation={data.primaryNav}/>
+        <h2 className="page-title">{data.domain}</h2>
+        <Header navigation={data.primaryNav}/>
     </div>
 }

@@ -1,12 +1,12 @@
-import { DropDownMenuTemplate, MenuItem } from "../DropDownMenuTemplate/DropDownMenuTemplate"
+import { DropDownMenu, MenuItem } from "../DropDownMenu/DropDownMenu"
 import { useState } from "react"
 import Icon from '/astro.svg'
 
-interface HeaderTemplateProps {
+interface HeaderProps {
     navigation: MenuItem[]
 }
 
-export const HeaderTemplate = (props: HeaderTemplateProps) => {
+export const Header = (props: HeaderProps) => {
     const {navigation} = props;
 
     const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +39,7 @@ export const HeaderTemplate = (props: HeaderTemplateProps) => {
                     </button>
                 </div>
                 <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 sm:flex sm:mx-auto sm:flex sm:items-center sm:w-auto sm:space-x-6">
-                    {navigation.map((item, index) => <DropDownMenuTemplate key={index} 
+                    {navigation.map((item, index) => <DropDownMenu key={index} 
                         menu_item={item}/>)}
                 </ul>
                 <a className="hidden sm:flex sm:items-center sm:ml-auto lsmg:mr-3 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold  rounded-xl transition duration-200"

@@ -1,8 +1,8 @@
 import CMS   from 'netlify-cms-app';
-import GlobalStyles from '../../styles/base/base.css?inline';
-import collections from '../../collections';
-import { PagePreview } from '../../components/Preview/Page'
-import { NavigationPreview } from '../../components/Preview/Navigation'
+import GlobalStyles from '@app/styles/base/base.css?inline';
+import collections from '@collections/index';
+import { PagePreview } from '@shared/ui/PreviewNetlify/Page'
+import { NavigationPreview } from '@shared/ui/PreviewNetlify/Navigation'
 import { useEffect} from 'react'
 
 

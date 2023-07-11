@@ -1,10 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { pageData } from "@utils/pageData";
-import { removeIndex } from '@utils/removeIndex'
-// import { Debug } from 'astro/components';
+import Layout from "@shared/ui/Layout/Layout.astro";
+import { pageData } from "@shared/lib/pageData";
+import { removeIndex } from '@shared/lib/removeIndex'
 import { Mapper } from './Mapper/Mapper'
-import { HeaderTemplate } from "src/components/ReactComponents/HeaderTemplate/HeaderTemplate";
+import { Header } from "@shared/ui/Header/Header";
 
 
 export async function getStaticPaths() {
@@ -38,7 +37,7 @@ const data = await pageData(Astro.props.url.slice(1));
 ---
 
 <Layout {...data}>
-    <HeaderTemplate navigation={data?.site?.primaryNav} client:load/>
+    <Header navigation={data?.site?.primaryNav} client:load/>
     <h2 class="pageTitle">{data?.titleHead}</h2>
     <Mapper pages={data.page} client:load/>
 </Layout>
