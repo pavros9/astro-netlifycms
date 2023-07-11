@@ -1,5 +1,7 @@
 import CMS   from 'netlify-cms-app';
 import GlobalStyles from '@app/styles/global.css?inline';
+import HeaderStyle from '@shared/ui/Header/Header.module.css?inline'
+import DropDownMenuStyle from '@shared/ui/Header/DropDownMenu/DropDownMenu.css';
 import collections from '@collections/index';
 import { PagePreview } from '@shared/ui/PreviewNetlify/Page'
 import { NavigationPreview } from '@shared/ui/PreviewNetlify/Navigation'
@@ -26,7 +28,10 @@ const Admin = () => {
             
             
         CMS.registerPreviewStyle(GlobalStyles, { raw: true });
-            
+        CMS.registerPreviewStyle(HeaderStyle, { raw: true });  
+        CMS.registerPreviewStyle(DropDownMenuStyle, { raw: true }); 
+
+
         CMS.registerPreviewTemplate("pages", PagePreview);
         CMS.registerPreviewTemplate("site", NavigationPreview);
     }, [])

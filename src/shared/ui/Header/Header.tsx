@@ -1,15 +1,15 @@
 import { 
-    DropDownMenu
+    DropDownMenu, MenuItem
 } from "./DropDownMenu/DropDownMenu"
 import { useState } from "react"
 import Icon from '/astro.svg'
 import cls from './Header.module.css'
 
-// interface HeaderProps {
-//     navigation: MenuItem[]
-// }
+interface HeaderProps {
+    navigation: MenuItem[]
+}
 
-export const Header = (props) => {
+export const Header = (props: HeaderProps) => {
     const { 
         navigation 
     } = props;
