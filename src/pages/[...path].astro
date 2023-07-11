@@ -38,6 +38,6 @@ const data = await pageData(Astro.props.url.slice(1));
 
 <Layout {...data}>
     <Header navigation={data?.site?.primaryNav} client:load/>
-    <h2 class="pageTitle">{data?.titleHead}</h2>
+    <h2>{data?.titleHead}</h2>
     <Mapper pages={data.page} client:load/>
 </Layout>

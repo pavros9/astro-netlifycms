@@ -17,11 +17,12 @@ export const Mapper = (props: MapperProps) => {
 
     return <>
         {pages?.map((item, index) => {
-            if(item.type === 'firstName'){
-                return <div key={index} className="firstName">{item.firstName}</div>
-            }
             if(item.type === 'storybook'){
-                return <div key={index} className="linkWrapper"><a href={item.storybook} className="link">Сторибук</a></div>
+                return <div key={index} 
+                    className="linkWrapper">
+                    <a href={item.storybook} 
+                        className="link">Сторибук</a>
+                </div>
             }
             if(item.type === 'slider'){
                 const images = item.images
