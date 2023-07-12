@@ -26,10 +26,8 @@ export const Header = (props: HeaderProps) => {
     return <>
         <header className="shadow shadow-gray-300">
             <nav className="max-w-screen-xl md:h-20 relative h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
-                <a className="text-3xl font-bold leading-none" href="#">
-                    <a href="/">
-                        <img  className={cls.icon} src={Icon}/>
-                    </a>
+                <a className="text-3xl font-bold leading-none" href="/">
+                    <img  className={cls.icon} src={Icon}/>
                 </a>
                 <div className="sm:hidden">
                     <button onClick={toggleBurger}
