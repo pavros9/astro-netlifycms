@@ -15,24 +15,24 @@ export interface Page {
 
 
 export const Mapper = (props: MapperProps) => {
-
     const { pages } = props
 
-    return <>
-        {pages?.map((item, index) => {
-            switch(item.type){
-                case storybook:
-                    return (
-                        <div key={index} 
+    const items = pages?.map((item, index) => {
+        if(item.type === storybook){
+            return (
+                <div key={index} 
                     className="linkWrapper">
                     <a href={item.storybook} 
                         className="link">Сторибук</a>
                 </div>
-                    )
-                case slider:
-                    const images = item.images
-                    return <Slider key={index} images={images}/>
-            }
-        })}
-    </>
+            )
+        }
+        else if(item.type === slider){
+            const images = item.images
+
+            return <Slider key={index} images={images}/>
+        }
+    })
+    
+    return <>{items}</>
 }
