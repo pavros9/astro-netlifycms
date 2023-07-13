@@ -3,36 +3,35 @@ import {
     slider 
 } from "@shared/const/typeItemForMapper";
 import { Slider } from "@shared/ui/Slider/Slider";
+import { 
+    IBaseItem, 
+    isLink, 
+    isSlider 
+} from "./types";
 
 interface MapperProps {
-    pages: Page[]
+    items: IBaseItem[]
 }
-
-export interface Page {
-    type: string,
-    images?: string[]
-}
-
 
 export const Mapper = (props: MapperProps) => {
-    const { pages } = props
+    const { items } = props
 
-    const items = pages?.map((item, index) => {
-        if(item.type === storybook){
+    const itemsPage = items?.map((item, index) => {
+        if(item.type === storybook && isLink(item)){
             return (
                 <div key={index} 
                     className="linkWrapper">
-                    <a href={item.storybook} 
+                    <a href={item.link} 
                         className="link">Сторибук</a>
                 </div>
             )
         }
-        else if(item.type === slider){
+        else if(item.type === slider && isSlider(item)){
             const images = item.images
 
             return <Slider key={index} images={images}/>
         }
     })
     
-    return <>{items}</>
+    return <>{itemsPage}</>
 }
