@@ -25,38 +25,14 @@ export const pages = {
             widget: 'list',
             types: [
                 {
-                    name: 'firstName',
-                    label: 'Имя',
-                    widget: 'object',
-                    fields: [
-                        {
-                            name: 'firstName',
-                            label: 'Имя',
-                            widget: 'string',
-                        }
-                    ]
-                },
-                {
                     name: 'storybook',
                     label: 'Сторибук',
                     widget: 'object',
                     fields: [
                         {
-                            name: 'storybook',
+                            name: 'link',
                             label: 'Сторибук',
                             widget: 'string',
-                        }
-                    ]
-                },
-                {
-                    name: 'img',
-                    label: 'Картинка',
-                    widget: 'object',
-                    fields: [
-                        {
-                            name: 'posts',
-                            label: 'Картинка',
-                            widget: 'string'
                         }
                     ]
                 },
@@ -75,7 +51,6 @@ export const pages = {
                                 widget: 'image'
                             }
                         },
-              
                     ]
                 }
             ]

@@ -13,6 +13,6 @@ export const PagePreview = (props: PagePreviewProps) => {
         <div className="page">
             {data.title}
         </div>
-        <Mapper pages={data.page}/>
+        <Mapper items={data.page}/>
     </>)
 }

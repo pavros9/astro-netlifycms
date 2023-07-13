@@ -1,8 +1,8 @@
 import CMS   from 'netlify-cms-app';
 import GlobalStyles from '@app/styles/global.css?inline';
 import HeaderStyle from '@shared/ui/Header/Header.module.css?inline'
-import DropDownMenuStyle from '@shared/ui/Header/DropDownMenu/DropDownMenu.css';
-import collections from '@collections/index';
+import DropDownMenuStyle from '@shared/ui/Header/DropDownMenu/DropDownMenu.css?inline';
+import { collections } from '@collections/index';
 import { PagePreview } from '@shared/ui/PreviewNetlify/Page'
 import { NavigationPreview } from '@shared/ui/PreviewNetlify/Navigation'
 import { useEffect} from 'react'
@@ -22,7 +22,7 @@ const Admin = () => {
                 local_backend: true,
                 media_folder: 'public/assets/blog',
                 public_folder: 'assets/blog',
-                collections: collections.map(({ collection }) => collection),
+                collections: collections
             },
         })
             

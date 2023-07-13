@@ -28,8 +28,6 @@ export async function getStaticPaths() {
             };
         });
     }
-
-   
 }
   
 const data = await pageData(Astro.props.url.slice(1));
@@ -39,5 +37,5 @@ const data = await pageData(Astro.props.url.slice(1));
 <Layout {...data}>
     <Header navigation={data?.site?.primaryNav} client:load/>
     <h2>{data?.titleHead}</h2>
-    <Mapper pages={data.page} client:load/>
+    <Mapper items={data.page} client:load/>
 </Layout>
