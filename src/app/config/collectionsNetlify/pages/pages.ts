@@ -1,6 +1,6 @@
-import { link } from "@collections/items/link";
-import { slider } from "@collections/items/slider";
-import { textWithImg } from "@collections/items/textWithImg";
+import { link } from '@collections/items/link'
+import { slider } from '@collections/items/slider'
+import { textWithImg } from '@collections/items/textWithImg'
 
 export const pages = {
     name: 'pages',
@@ -9,29 +9,25 @@ export const pages = {
     folder: 'content/pages',
     create: true,
     delete: true,
-    slug: "{{slug}}",
-    nested:{depth:3},
-    meta:{path:{widget:'string',label:'Path',index_file:'_index'}},
+    slug: '{{slug}}',
+    nested: { depth: 3 },
+    meta: { path: { widget: 'string', label: 'Path', index_file: '_index' } },
     fields: [
         {
             name: 'title',
             label: 'Url',
-            widget: 'string'
+            widget: 'string',
         },
         {
             name: 'titleHead',
             label: 'Title',
-            widget: 'string'
+            widget: 'string',
         },
         {
             name: 'page',
             label: 'Контент страницы',
             widget: 'list',
-            types: [
-                link,
-                slider,
-                textWithImg
-            ]
-        }
-    ]
+            types: [link, slider, textWithImg],
+        },
+    ],
 }

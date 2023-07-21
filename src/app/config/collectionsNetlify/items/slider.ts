@@ -10,8 +10,8 @@ export const slider = {
             field: {
                 label: 'Image',
                 name: 'image',
-                widget: 'image'
-            }
+                widget: 'image',
+            },
         },
-    ]
+    ],
 }

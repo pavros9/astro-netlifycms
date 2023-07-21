@@ -1,16 +1,7 @@
-import { 
-    link, 
-    slider, 
-    textWithImg
-} from "@shared/const/typeItemForMapper";
-import { Slider } from "@shared/ui/Slider/Slider";
-import { 
-    IBaseItem, 
-    isLink, 
-    isSlider, 
-    isTextWithImg
-} from "@shared/types/types";
-import { ImgSize, TextWithImg } from "@shared/ui/TextWithImg/TextWithImg";
+import { link, slider, textWithImg } from '@shared/const/typeItemForMapper'
+import { Slider } from '@shared/ui/Slider/Slider'
+import { IBaseItem, isLink, isSlider, isTextWithImg } from '@shared/types/types'
+import { ImgSize, TextWithImg } from '@shared/ui/TextWithImg/TextWithImg'
 
 interface MapperProps {
     items: IBaseItem[]
@@ -20,28 +11,22 @@ export const Mapper = (props: MapperProps) => {
     const { items } = props
 
     const itemsPage = items?.map((item, index) => {
-        if(item.type === link && isLink(item)){
+        if (item.type === link && isLink(item)) {
             return (
-                <div key={index} 
-                    className="linkWrapper">
-                    <a href={item.href}
-                        className="link">{item.text}</a>
+                <div key={index} className="linkWrapper">
+                    <a href={item.href} className="link">
+                        {item.text}
+                    </a>
                 </div>
             )
-        }
-        else if(item.type === slider && isSlider(item)){
+        } else if (item.type === slider && isSlider(item)) {
             const images = item.images
 
-            return <Slider key={index} images={images}/>
-        }
-
-        else if(item.type === textWithImg && isTextWithImg(item)){
-            return <TextWithImg image={item.image} 
-                text={item.text} 
-                key={index} 
-                imgSize={item.imgSize}/>
+            return <Slider key={index} images={images} />
+        } else if (item.type === textWithImg && isTextWithImg(item)) {
+            return <TextWithImg image={item.image} text={item.text} key={index} imgSize={item.imgSize} />
         }
     })
-    
+
     return <>{itemsPage}</>
 }

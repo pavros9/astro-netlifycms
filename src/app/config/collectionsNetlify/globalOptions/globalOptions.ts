@@ -1,4 +1,4 @@
-import { navigation } from "./navigation"
+import { navigation } from './navigation'
 
 export const global_options = {
     label: 'Настройка сайта',
@@ -9,19 +9,19 @@ export const global_options = {
             label: 'Настройка сайта',
             name: 'site',
             file: 'content/globals/site.md',
-            fields:[
+            fields: [
                 {
                     label: 'Название сайта',
                     name: 'siteName',
-                    widget: 'string'
+                    widget: 'string',
                 },
                 {
                     label: 'Домен',
                     name: 'domain',
-                    widget: 'string'
+                    widget: 'string',
                 },
-                navigation
-            ]
-        }
-    ]
+                navigation,
+            ],
+        },
+    ],
 }

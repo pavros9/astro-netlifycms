@@ -1,12 +1,12 @@
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@shared/*": ["src/shared/*"],
-      "@collections/*": ["src/app/config/collectionsNetlify/*"],
-      "@app/*": ["src/app/*"],
-      "@public/*": ["public/*"]
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "paths": {
+            "@shared/*": ["src/shared/*"],
+            "@collections/*": ["src/app/config/collectionsNetlify/*"],
+            "@app/*": ["src/app/*"],
+            "@public/*": ["public/*"]
+        }
     }
-  }
 }

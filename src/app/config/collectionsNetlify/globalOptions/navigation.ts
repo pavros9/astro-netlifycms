@@ -6,7 +6,7 @@ export const navigation = {
         {
             label: 'Ссылка',
             name: 'label',
-            widget: 'string'
+            widget: 'string',
         },
         {
             label: 'Страница',
@@ -15,7 +15,7 @@ export const navigation = {
             collection: 'pages',
             value_field: '{{slug}}',
             display_fields: ['title'],
-            search_fields: ['title']
+            search_fields: ['title'],
         },
         {
             label: 'Список',
@@ -25,12 +25,12 @@ export const navigation = {
                 {
                     label: 'Ссылка',
                     name: 'link_dropdown',
-                    widget: 'string'
+                    widget: 'string',
                 },
                 {
                     label: 'path',
                     name: 'uri_dropdown',
-                    widget: 'string'
+                    widget: 'string',
                 },
                 {
                     label: 'Страница',
@@ -39,9 +39,9 @@ export const navigation = {
                     collection: 'pages',
                     value_field: '{{slug}}',
                     display_fields: ['title'],
-                    search_fields: ['title']
+                    search_fields: ['title'],
                 },
-            ]
-        }
-    ]
+            ],
+        },
+    ],
 }

@@ -1,4 +1,4 @@
-export const link =  {
+export const link = {
     name: 'link',
     label: 'Ссылка',
     widget: 'object',
@@ -12,6 +12,6 @@ export const link =  {
             name: 'text',
             label: 'Текст ссылки',
             widget: 'string',
-        }
-    ]
+        },
+    ],
 }
