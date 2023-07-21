@@ -7,27 +7,25 @@ import { Header } from "@shared/ui/Header/Header";
 
 
 export async function getStaticPaths() {
-    let pages = [];
+    let pages = null;
+
     try {
         pages = await Astro.glob("../../content/pages/**/*.md");
 
     }finally {
-        return pages.map((page) => {
-            let path = removeIndex(page?.url?.slice(1));
-
-            if (path === "main") 
-            {
-                path = undefined;
-            }
+        pages = pages.map((page) => {
+            const path = removeIndex(page?.url?.slice(1));
 
             return {
                 params: {
-                    path: path,
+                    path: path !== 'main' ? path : undefined ,
                 },
                 props: page,
             };
-        });
+        });-
     }
+
+    return pages
 }
   
 const data = await pageData(Astro.props.url.slice(1));
@@ -36,6 +34,8 @@ const data = await pageData(Astro.props.url.slice(1));
 
 <Layout {...data}>
     <Header navigation={data?.site?.primaryNav} client:load/>
-    <h2>{data?.titleHead}</h2>
-    <Mapper items={data.page} client:load/>
+    <div class="max-w-screen-xl mx-auto px-5 pt-14">
+        <h2 class="text-center mb-5 text-5xl">{data?.titleHead}</h2>
+        <Mapper items={data.page} client:load/>
+    </div>
 </Layout>

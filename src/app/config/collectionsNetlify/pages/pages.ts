@@ -1,3 +1,6 @@
+import { link } from "@collections/items/link";
+import { slider } from "@collections/items/slider";
+
 export const pages = {
     name: 'pages',
     label: 'Страницы',
@@ -24,35 +27,8 @@ export const pages = {
             label: 'Контент страницы',
             widget: 'list',
             types: [
-                {
-                    name: 'storybook',
-                    label: 'Сторибук',
-                    widget: 'object',
-                    fields: [
-                        {
-                            name: 'link',
-                            label: 'Сторибук',
-                            widget: 'string',
-                        }
-                    ]
-                },
-                {
-                    name: 'slider',
-                    label: 'Слайдер',
-                    widget: 'object',
-                    fields: [
-                        {
-                            name: 'images',
-                            label: 'Слайды',
-                            widget: 'list',
-                            field: {
-                                label: 'Image',
-                                name: 'image',
-                                widget: 'image'
-                            }
-                        },
-                    ]
-                }
+                link,
+                slider
             ]
         }
     ]

@@ -7,7 +7,8 @@ interface ISlider extends IItem {
 }
 
 interface ILink extends IItem {
-    link: string
+    href: string
+    text: string
 }
 
 export type IBaseItem = ISlider | ILink
@@ -17,5 +18,5 @@ export function isSlider(item: IBaseItem): item is ISlider {
 }
 
 export function isLink(item: IBaseItem): item is ILink {
-    return (item as ILink).link !== undefined;
+    return (item as ILink).href !== undefined;
 }

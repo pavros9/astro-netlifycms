@@ -1,5 +1,5 @@
 import { 
-    storybook, 
+    link, 
     slider 
 } from "@shared/const/typeItemForMapper";
 import { Slider } from "@shared/ui/Slider/Slider";
@@ -17,12 +17,12 @@ export const Mapper = (props: MapperProps) => {
     const { items } = props
 
     const itemsPage = items?.map((item, index) => {
-        if(item.type === storybook && isLink(item)){
+        if(item.type === link && isLink(item)){
             return (
                 <div key={index} 
                     className="linkWrapper">
-                    <a href={item.link} 
-                        className="link">Сторибук</a>
+                    <a href={item.href}
+                        className="link">{item.text}</a>
                 </div>
             )
         }
