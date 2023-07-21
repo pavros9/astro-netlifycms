@@ -13,4 +13,5 @@ page:
   - type: textWithImg
     text: Вот такой текст
     image: assets/blog/lyogkie-anime-kartinki-dlya-srisovki-skachat-besplatno_11.jpg
+    imgSize: big
 ---

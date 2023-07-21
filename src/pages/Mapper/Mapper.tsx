@@ -10,7 +10,7 @@ import {
     isSlider, 
     isTextWithImg
 } from "@shared/types/types";
-import { TextWithImg } from "@shared/ui/TextWithImg/TextWithImg";
+import { ImgSize, TextWithImg } from "@shared/ui/TextWithImg/TextWithImg";
 
 interface MapperProps {
     items: IBaseItem[]
@@ -36,7 +36,10 @@ export const Mapper = (props: MapperProps) => {
         }
 
         else if(item.type === textWithImg && isTextWithImg(item)){
-            return <TextWithImg image={item.image} text={item.text} key={index}/>
+            return <TextWithImg image={item.image} 
+                text={item.text} 
+                key={index} 
+                imgSize={item.imgSize}/>
         }
     })
     

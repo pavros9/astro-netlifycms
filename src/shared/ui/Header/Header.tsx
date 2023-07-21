@@ -44,15 +44,6 @@ export const Header = (props: HeaderProps) => {
                     {navigation.map((item, index) => <DropDownMenu key={index} 
                         menu_item={item}/>)}
                 </ul>
-                <a className="hidden sm:flex sm:items-center sm:ml-auto lsmg:mr-3 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold  rounded-xl transition duration-200"
-                    href="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                        stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round"
-                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                Личный кабинет
-                </a>
             </nav>
         </header>
 
@@ -82,14 +73,6 @@ export const Header = (props: HeaderProps) => {
                                 href="#">Главная</a>
                         </li>
                     </ul>
-                </div>
-                <div className="mt-auto">
-                    <div className="pt-6">
-                        <a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-                            href="#">Sign in</a>
-                        <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
-                            href="#">Sign Up</a>
-                    </div>
                 </div>
             </nav>
         </div>

@@ -14,6 +14,7 @@ export interface ILink extends IItem {
 export interface ITextWithImg extends IItem {
     text: string
     image: string
+    imgSize?: string
 }
 
 export type IBaseItem = ISlider | ILink | ITextWithImg
