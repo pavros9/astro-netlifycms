@@ -36,7 +36,7 @@ export const Mapper = (props: MapperProps) => {
         }
 
         else if(item.type === textWithImg && isTextWithImg(item)){
-            return <TextWithImg image={item.image} text={item.text} />
+            return <TextWithImg image={item.image} text={item.text} key={index}/>
         }
     })
     

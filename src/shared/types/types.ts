@@ -6,7 +6,7 @@ export interface ISlider extends IItem {
     images: string[]
 }
 
- export interface ILink extends IItem {
+export interface ILink extends IItem {
     href: string
     text: string
 }
