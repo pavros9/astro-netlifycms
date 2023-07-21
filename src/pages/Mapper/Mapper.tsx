@@ -1,13 +1,16 @@
 import { 
     link, 
-    slider 
+    slider, 
+    textWithImg
 } from "@shared/const/typeItemForMapper";
 import { Slider } from "@shared/ui/Slider/Slider";
 import { 
     IBaseItem, 
     isLink, 
-    isSlider 
-} from "./types";
+    isSlider, 
+    isTextWithImg
+} from "@shared/types/types";
+import { TextWithImg } from "@shared/ui/TextWithImg/TextWithImg";
 
 interface MapperProps {
     items: IBaseItem[]
@@ -30,6 +33,10 @@ export const Mapper = (props: MapperProps) => {
             const images = item.images
 
             return <Slider key={index} images={images}/>
+        }
+
+        else if(item.type === textWithImg && isTextWithImg(item)){
+            return <TextWithImg image={item.image} text={item.text} />
         }
     })
     

@@ -1,5 +1,6 @@
 import { link } from "@collections/items/link";
 import { slider } from "@collections/items/slider";
+import { textWithImg } from "@collections/items/textWithImg";
 
 export const pages = {
     name: 'pages',
@@ -28,7 +29,8 @@ export const pages = {
             widget: 'list',
             types: [
                 link,
-                slider
+                slider,
+                textWithImg
             ]
         }
     ]
